@@ -55,7 +55,7 @@ meanSDData$subjectID <- c(train_subjectID$subjectID, test_subjectID$subjectID)
 ## as a result the column activityLabels$activityName is added to meanSDData
 meanSDData = merge(meanSDData, activityLabels)
 meanSDData$activityID <- NULL
-write.csv(file="mean_SD_data.csv", x=meanSDData, row.names = F)
+#write.csv(file="means_and_SDs_data.csv", x=meanSDData, row.names = F)
 
 ## 5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 ## compute mean of means and SD
