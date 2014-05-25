@@ -1,10 +1,12 @@
-## 
-### The script run_analysis.R load the sparse movement sensor data available at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip to produce a tidy datafile as output
+## Getting and Cleaning Data **Course Project**
+
+The script run_analysis.R load the sparse movement sensor data available [here][sensordata] to produce a tidy datafile as output
 
 The dataset is composed by accelerometer and gyroscope of a Samsung Galaxy II while performing 6 common physical activities.
 
 The data was originaly split in training and test datasets. Feature names, subject code, activity code and activity code/name correspondence were also available in different files. 
-Additional information on the dataset may be found at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+[Additional information on the dataset][info] 
+
 
 The main steps of the script are
 
@@ -19,3 +21,9 @@ The main steps of the script are
 8. generate the tidy data file as a .csv
 
 The tidy data uploaded to coursera was manually converted to .txt (the only text format accepted in the submission page) and may cause readibility issues if not converted back to .csv
+
+[The New York Times][NY Times].
+
+[sensordata]: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+[info]http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
