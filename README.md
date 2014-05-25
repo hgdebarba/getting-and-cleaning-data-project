@@ -1,29 +1,28 @@
-## Getting and Cleaning Data **Course Project**
+## Getting and Cleaning Data Course Project
 
-The script run_analysis.R load the sparse movement sensor data available [here][sensordata] to produce a tidy datafile as output
+The script run_analysis.R produces a tidy data file from [this][sensordata] movement sensor data set
 
-The dataset is composed by accelerometer and gyroscope of a Samsung Galaxy II while performing 6 common physical activities.
+The original data set is composed of accelerometer and gyroscope preprocessed data, acquired with a Samsung Galaxy II smartphone while performing 6 daily physical activities.
 
-The data was originaly split in training and test datasets. Feature names, subject code, activity code and activity code/name correspondence were also available in different files. 
-[Additional information on the dataset][info] 
+The data was originally split into training and test data sets. Feature names, subject code, activity code and activity code/name correspondence were also available, but in different files. 
+Additional information on the original data set may be found [here][addinfo] 
 
 
-The main steps of the script are
+In order to deliver the tidy data, **run_analysis.R** performs the following steps:
 
-1. load sparse data (training, test, features, subjects, activities, activities name)
-2. merge training and test data
-3. set correct feature name
-3. subset mean and standard deviation data from the dataset
-4. reshape column names to become more readible
-5. add activity and subject codes to the data
-6. switch activity code to activity name
-7. compute mean of data (original mean and SD) by subject code and activity name
+1. load sparse data (training, test, features, subjects, activities code, activities name)
+2. merge training and test data (x_train and x_test)
+3. set feature name (features.txt)
+3. subset mean and standard deviation data from the data set
+4. edit feature names to become more readable
+5. add activity and subject codes to the data (y_train.txt, y_test.txt and subject_test.txt)
+6. switch the column activity code to activity name (activity_labels.txt)
+7. compute the mean of means/SDs by subject code and activity name  
 8. generate the tidy data file as a .csv
 
-The tidy data uploaded to coursera was manually converted to .txt (the only text format accepted in the submission page) and may cause readibility issues if not converted back to .csv
+The tidy data uploaded to coursera was manually converted to .txt (the only text format accepted by the submission page) and may cause readability issues if not converted back to .csv
 
-[The New York Times][NY Times].
 
 [sensordata]: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-[info]http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+[addinfo]http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
